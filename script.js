@@ -34,9 +34,25 @@ button.addEventListener("click", () => {
     parent.appendChild(li);
     span.innerHTML = "\u00d7";
     li.appendChild(span);
+    setData();
   }
   input.value = "";
 });
 
-
 //event listener using eventlistner
+parent.addEventListener("click", (e) => {
+  if (e.target.tagName === "SPAN") {
+    e.target.parentElement.remove();
+    setData();
+  }
+});
+
+//using local storage
+function setData() {
+  localStorage.setItem("data", parent.innerHTML);
+}
+
+function showData() {
+  parent.innerHTML = localStorage.getItem("data");
+}
+showData();
