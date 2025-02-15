@@ -30,7 +30,8 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: bisque;
+  background-color: rgb(255, 251, 246);
+  border-radius: 24px;
 }
 
 h2 {
@@ -72,4 +73,11 @@ span {
   justify-content: center;
   width: 100%;
   margin-bottom: 1rem;
+}
+
+.progress {
+  width: 20px;
+  height: 10px;
+  background-color: rgb(35, 158, 68);
+  margin-top: 1rem;
 }
